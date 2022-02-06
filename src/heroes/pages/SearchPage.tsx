@@ -1,8 +1,8 @@
-import { useMemo, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useMemo } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
 import queryString from "query-string";
-import { Card, CardMemo } from "../components/hero/Card";
+import { CardMemo } from "../components/hero/Card";
 import { getHeroesByName } from "../selectors/getHeroes";
 
 export const Search = () => {
@@ -47,8 +47,6 @@ export const Search = () => {
 			)}
 			<ul>
 				{foundHeroes.map((hero, i) => {
-					let wait = true;
-
 					return <CardMemo hero={hero} key={hero.id} bounce />;
 				})}
 			</ul>

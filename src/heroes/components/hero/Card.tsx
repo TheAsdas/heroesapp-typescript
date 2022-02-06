@@ -1,6 +1,5 @@
-import { memo, useCallback, useEffect, useMemo, useRef } from "react";
-import { findDOMNode } from "react-dom";
-import { Link, useNavigate } from "react-router-dom";
+import { memo, useCallback, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface iProps {
 	hero: Hero;
